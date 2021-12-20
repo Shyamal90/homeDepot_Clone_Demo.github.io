@@ -106,7 +106,7 @@ function navbar(){
                             </div>
                         </li>
                         <li><a href="list.html">Lists <img src="../image/heart.svg" alt="logo"> </a></li>
-                        <li><a href="./main/cart.html">Cart |<span id="totalItems"> 6 </span> items<img src="./image/cart.svg" alt="logo"> </a></li>
+                        <li><a href="../main/cart.html">Cart |<span id="totalItems"> 6 </span> items<img src="../image/cart.svg" alt="logo"> </a></li>
                     </ul>
                 </div>
             </div>

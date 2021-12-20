@@ -456,7 +456,12 @@
     // let totalItems = cartItems.length;
     console.log(cartItems);
 
-    document.querySelector("#totalItems").innerHTML=cartItems.length;
+    if(cartItems.length > 0){
+        document.querySelector("#totalItems").innerHTML=cartItems.length;
+    }else{
+        document.querySelector("#totalItems").innerHTML=0;
+    }
+    
 
 </script>
 

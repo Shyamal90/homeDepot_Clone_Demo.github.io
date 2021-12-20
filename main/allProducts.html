@@ -242,3 +242,18 @@
 <script src="../Script/db.js"></script>
 <script src="../Script/profileUpdate.js"></script>
 <script src="../script/sidebar.js"></script>
+
+<script>
+  // Update cart items value
+  let cartItems = JSON.parse(localStorage.getItem("cartData"));
+  // let totalItems = cartItems.length;
+  console.log(cartItems);
+
+  if(cartItems.length > 0){
+      document.querySelector("#totalItems").innerHTML=cartItems.length;
+  }else{
+      document.querySelector("#totalItems").innerHTML=0;
+  }
+  
+
+</script>

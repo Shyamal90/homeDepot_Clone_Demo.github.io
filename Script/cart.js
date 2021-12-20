@@ -89,6 +89,8 @@ let totalAmount = 0;
         // totalAmount = totalAmount.toFixed(2);
         console.log(totalAmount);
 
+        localStorage.setItem("totalAmt", JSON.stringify(totalAmount));
+
         // show Price
         document.querySelector("#priceEl").innerHTML ="$" + totalAmount.toFixed(2);
         let newAmmount = (totalAmount - 13.99).toFixed(2);

@@ -9,7 +9,7 @@ function footer(){
         >
       </form>
 
-      <div>
+      <div style="margin-left:380px;">
         <div>
           <p>Customer Service</p>
           <div>Check Order Status</div>

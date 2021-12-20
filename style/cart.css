@@ -298,3 +298,6 @@ body{
 #paypal:hover{
     cursor: pointer;
 }
+.productPrice{
+    margin-left:2%;
+}

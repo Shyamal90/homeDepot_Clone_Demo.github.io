@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+     <link rel="stylesheet" href="../style/checkout.css">
+
+   
+  </head>
+  <body>
+    <div id="outer_div">
+      <div class="navbar">
+        <div class="homebtn">
+          <img
+          src="https://www.homedepot.com/mycheckout/assets/react/images/hd-logo.svg"
+        />
+        </div>
+        <div class="GotoHomepage">
+          <div class="box1">
+                    <p>Are you sure you want to return to the Homepage?</p>
+                    <img src="https://assets.thdstatic.com/images/v1/close-symbol-orange.svg">
+                </div>
+
+                <div class="box2">
+                   <button><a href="../index.html">Go To Homepage</a></button>
+                </div>
+                <div id="or">or</div>
+
+                <div class="box3">
+                    <button>Stay in Checkout</button>
+                </div>
+
+        </div>
+
+
+        <h1>Secure Checkout</h1>
+        <img
+          src="https://media.istockphoto.com/vectors/lock-icon-vector-id936681148?k=20&m=936681148&s=170667a&w=0&h=q0fzf2khHO4E5O084FpjIb_mNsTWjWg0nGAZfFqiqKQ="
+        />
+        <img
+          src="https://www.homedepot.com/mycheckout/assets/react/images/THD_Cart.svg"
+        />
+        <p>Edit Cart</p>
+      </div>
+
+      <div id="left_right">
+        <div id="left_box">
+          <div>
+            <h3>Contact</h3>
+            <p>Update your Info</p>
+          </div>
+
+          <div>
+            <div>
+              <label>First Name</label>
+              <label>Last Name</label>
+            </div>
+            <br />
+            <div>
+              <input/>
+              <input/>
+            </div>
+          </div>
+
+          <div>
+            <label>Phone</label>
+            <br />
+            <input />
+          </div>
+
+          <div>
+            <input />
+            <label>Text me when my order is ready</label>
+            <p>
+              Home Depot will send you a text message when your order is ready
+              for pickup. Message and data rates may apply and texts may be sent
+              between the hours of [8:00 am and 9:00 pm]. Privacy Policy at
+              www.homedepot.com/c/Privacy_Security. <span>Full terms</span>
+            </p>
+            <p>Will someone else pick it up?</p>
+          </div>
+          <hr id="hr1" />
+
+          <div id="row2">
+            <div>
+              <h3>Store Pickup</h3>
+
+              <p>Guam - Tamuning Store</p>
+
+              <p>Where would you like to pick up your items?</p>
+
+              <div>
+                <div>
+                  <input />
+                  <label>In Store</label>
+                </div>
+
+                <div>
+                  <input />
+                  <label>Curbside</label>
+                </div>
+              </div>
+
+              <p>
+                <span> Next Steps: </span>We'll send an email with detailed
+                instructions once you've placed your order.
+              </p>
+
+              <hr id="hr2"/>
+
+              <div id="payment">
+                <h2>Payment</h2>
+                <div>
+                  <input />
+                  <!-- <label>Paypal</label> -->
+                  <img src="https://www.pinclipart.com/picdir/middle/122-1222671_pay-with-paypal-paypal-logo-high-resolution-clipart.png">
+                </div>
+                <div>
+                  <input />
+                  <label>Credit Card</label>
+                </div>
+
+                <input type="text" placeholder="Enter credit Card number" />
+
+                <div>
+                  <div>
+                    <label>Expiration</label>
+                    <label>CVV(on back)</label>
+                  </div>
+                  <br />
+                  <input />
+                  <input />
+                  <input />
+                </div>
+
+                <div>
+                  <input />
+                  <label>Save as my default credit card</label>
+                </div>
+
+                <p>Apply a Gift Card | Have a PO/Job Code fot this order?</p>
+
+                <div>
+                  <label>Billing Address</label><br />
+                  <input /><br />
+
+                  <label>Address Line 2(Optional)</label>
+                  <br />
+                  <input /><br />
+
+                  <label>ZIP Code</label>
+                  <br />
+                  <input />
+                  <label>Enter ZIP Code to see city and state</label>
+                </div>
+
+                <hr  id="hr3"/>
+
+                <div id="last">
+                  <p>The order confirmation and updates will be emailed to</p>
+
+                  <button onclick="alertOrd()">Place Order</button>
+
+                  <p>
+                    We are required by law to charge all applicable sales taxes
+                    for online orders.
+                  </p>
+
+                  <p>
+                    Please note that the order totals during your checkout
+                    reflect estimated sales tax. The actual charge to your form
+                    of payment will include applicable state and local sales
+                    taxes and will be calculated when order is shipped.
+                  </p>
+
+                  <p>
+                    By providing your mobile phone number and clicking Place
+                    Order, you agree to receive a text message from Home Depot
+                    when your order is ready for pickup. One text per order.
+                    Message and data rates may apply and texts may be sent
+                    between the hours of [8:00 am and 10:00 pm]. Consent not
+                    required and not a condition of purchase. You will also
+                    receive email order updates. Not all carriers supported. For
+                    help, text HELP to [53747] or call 1-800-HOMEDEPOT; to stop
+                    texts, text STOP to[53747] (a confirmation text will be
+                    sent).
+                  </p>
+
+                  <p>
+                    Local store prices may vary from those displayed. Products
+                    shown as available are normally stocked but inventory levels
+                    cannot be guaranteed.
+                  </p>
+
+                  <p>
+                    © 2000 - 2013 Homer TLC, Inc. All Rights Reserved. Use of
+                    this site is subject to certain
+                    <span>Terms of Use</span> which constitute a legal agreement
+                  </p>
+
+                  <p>
+                    between you and The Home Depot U.S.A. inc. View our
+                    <span>My Account</span> Terms and Conditions and
+                    <span>Privacy & Security</span>
+                    Statement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="right_box">
+          <div>
+            <h2>Your Order</h2>
+            <h3 id="amount">0</h3>
+          </div>
+
+          <div>
+              <div>
+                <img  src="https://www.homedepot.com/mycheckout/assets/react/images/icons/new-shipping-icon.svg"/>
+                <h3>Pick Up In Store</h3>
+              </div>
+            <hr />
+
+          <div>
+            <p>Pick up as soon as today, see availability below.</p>
+            <p>FREE</p>
+          </div>
+          <hr />
+
+          <div id="">
+             <h4>Guam - Tamuning Store</h4>
+             <p>295 Chalan Pasaheru Route 10a, Tamuning, GU 96913 | (671)648-0440</p>
+             <p>Curbside Available</p>
+
+             <!-- <div>
+                <div>
+                     <img>
+                </div>
+                <div>
+                     <p>product name</p>
+                   <p>Qty:</p>
+                   <p>Expected pickup day</p>
+                </div>
+             </div>
+
+          </div>
+
+          <div id="subtotal">
+              subtotal
+          </div> -->
+
+          <hr />
+          <div id="total">
+
+            <h2>Total</h2>
+            <h3>$3998</h3>
+          </div>
+          <p>Have a promo code?</p>
+
+          <div>
+              <p><span>GET $25 OFF* and pay $14.98 instead</span> on your qualifying purchase, plus receive 6 months everyday financing** on purchases over $299 when you open a new card.</p>
+          <div>
+              <img src="https://assets.homedepot-static.com/images/v1/plcc-credit-card.png">
+              <button>Apply Now</button>
+              <p>see Terms</p>
+          </div>
+          </div>
+
+          <div>Need help?</div>
+          <div>Call us at 1-800-466-3337, 6 a.m. - 2 a.m. ET</div>
+          <div>For assistance with custom blinds, call 1-800-658-7320</div>
+
+
+
+
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+    let flag;
+    console.log(navbar);
+    document.querySelector(".navbar").innerHTML = navbar(f);
+
+</script>
+
+<script src="../Script/checkout.js" type="module"></script>
+<script>
+
+function alertOrd(){
+    alert("Order Sucessful");
+}
+
+let total=JSON.parse(localStorage.getItem("totalAmt"));
+
+console.log(total);
+
+document.querySelector("#amount").textContent = "$ "+total;
+
+
+
+</script>
+
+<script>
+  // Update cart items value
+  let cartItems = JSON.parse(localStorage.getItem("cartData"));
+  // let totalItems = cartItems.length;
+  console.log(cartItems);
+
+  if(cartItems.length > 0){
+      document.querySelector("#totalItems").innerHTML=cartItems.length;
+  }else{
+      document.querySelector("#totalItems").innerHTML=0;
+  }
+  
+
+</script>
