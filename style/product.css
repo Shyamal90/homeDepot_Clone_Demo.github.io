@@ -1,0 +1,216 @@
+.productBanner{
+    margin: 50px;
+    /* width: 980px; */
+    border: 1px solid rgba(250, 179, 167, 0.349);
+}
+
+.container{
+    overflow: hidden;
+    /* width: max-content; */
+}
+
+.resultDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultDiv .box2{
+    display: flex;
+    margin-right: 150px;
+}
+
+.resultDiv .box1{
+    margin-left: 50px;
+}
+
+.product_wrapper{
+    /* border: 1px solid black; */
+    display: flex;
+    margin: 20px 0px;
+}
+
+.filterOptions{
+    min-width: 200px;
+    border: 1px solid brown;
+    height: 600px;
+    
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgba(219, 218, 218, 0.37);
+    font-family: sans-serif;
+}
+
+.product{
+    height: fit-content;
+    margin: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    /* min-width: 300px; */
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    height: 600px;
+}
+
+
+.productImg{
+    width: 55%;
+    height: 35%;
+    object-fit: contain;
+}
+
+/* Heart Logo */
+.heartLogo{
+    background-color: rgba(233, 231, 231, 0.486);
+    position: absolute;
+    padding: 10px;
+    right: 0px;
+    border-radius: 45%;
+}
+
+.color_container{
+    display: flex;
+   
+    /* border:1px solid rgb(169, 143, 199); */
+    padding-left: 0px;
+}
+
+.firstBox,.secondBox{
+    /* border: 1px solid black; */
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 4px;
+   
+}
+
+.firstBox{
+    background-color: brown;
+    margin-left: 0px;
+    
+}
+
+.secondBox{
+    background-color: gray;
+}
+
+.firstBox:hover,.secondBox:hover{
+    border: 2px solid #f96302;
+    margin: 4px;
+}
+
+.product .title{
+    font-size: 12px;
+    text-align: left;
+    color: rgb(83, 83, 83);
+    /* border:1px solid red; */
+    padding:10px 10px 10px 0px; 
+}
+
+.product .price{
+    color: teal;
+     padding: 10px ;
+     /* border:1px solid orangered */
+}
+
+.product .descrip{
+    color: rgb(177, 176, 176);
+    border:1px solid orangered
+    
+}
+
+.product .modelNo{
+    font-size: 10px;
+    text-align: left;
+    /* border:1px solid green; */
+    padding:0px 10px 10px 0px; 
+}
+
+.product .rating_div{
+    display: flex;
+    align-items: center;
+}
+
+.product .stars{
+    color: #f96302;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    padding:10px 1px 10px 0px; 
+    /* border:1px solid  yellow */
+    
+}
+
+.product .ratingCount{
+    margin: 10px 0px;
+    font-size: 11px;
+    /* border: 1px solid red;; */
+}
+
+.product .priceDiv{
+    display: flex;
+    font-size: 13px;
+   
+    padding:10px 0px 10px 0px;
+}
+
+/* PickUp section */
+.pickUp{
+    display: flex;
+    margin: 18px 0px;
+    font-size: 12px;
+    /* border:1px solid red; */
+}
+
+.pickupHeading{
+    /* display: block; */
+    margin: 0px 10px;
+}
+
+/* Delivery Section */
+.deliveryContainer{
+    display: flex;
+    margin: 18px 0px;
+    font-size: 12px;
+}
+
+.deliveryheading{
+    margin: 0px 10px;
+    background-color: transparent;
+}
+
+.addToCartBtn{
+    /* display: none; */
+    margin:15px auto;
+    padding: 12px;
+    font-size: 20px;
+    width: 80%;
+    border: 2px solid #f96302;
+    background-color: rgb(248, 248, 248);
+    color: #f96302;
+    cursor: pointer;
+    /* position: absolute; */
+    /* left: 42.5px; */
+    /* top: 45%; */
+}
+
+
+.addToCartBtn:hover{
+    background-color:#f96302;
+    color: white
+    /* border:1px solid red */
+}
+
+#sortEl{
+    border: 1px solid tomato;
+}
+
+
+.filterOptions{
+    margin-top: 18px;
+}

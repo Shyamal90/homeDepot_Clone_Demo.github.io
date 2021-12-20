@@ -1,0 +1,44 @@
+.productDetails{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+.createAcc{
+    border: 1px solid black;
+    text-align: center;
+    margin: 50px 0px;
+    font-family: sans-serif;
+}
+
+.createAcc p{
+    color: rgb(77, 76, 76);
+}
+
+.createAcc button{
+    font-size: 22px;
+    margin: 8px 0px;
+    padding: 5px 40px;
+    background-color: #f96302;
+    border-bottom: 4px solid #973e02;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.listFunctionity{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.listFunctionity .box{
+    border: 1px solid black;
+    text-align: center;
+    width: 15%;
+    /* height: 190px; */
+    padding: 40px;
+    font-size: 18px;
+    font-family: san-serif;
+    line-height: 30px;
+}

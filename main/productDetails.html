@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Home Depot</title>
+    <link rel = "icon" href ="https://assets.homedepot-static.com/single-signin-ui/0.557.0/build/7b4c51f66559b768081eabf61db98f2d.svg" type = "image/x-icon">
+    <link rel="stylesheet" href="../style/product.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/productDetails.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/list.css">
+    <link rel="stylesheet" href="../style/listMin.css">
+    <link rel="stylesheet" href="../style/home.css">
+
+    <!-- font awesome icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- bootstrap icons cdn -->
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+    <div class="container">
+        <!-- Heading  -->
+        <div class="heading">
+            <p id="retainerHeading">#1 Home Improvement Retailer</p>
+        </div>
+
+
+        <!-- Extra Options -->
+        <div class="extraOptions">
+               <ul>
+                   <li> <a href="#">Store Finder</a></li>
+                   <li> <a href="#">Truck & Tool Rental</a></li>
+                   <li> <a href="#">For the Pro</a></li>
+                   <li> <a href="#">Gigt Cards</a></li>
+                   <li> <a href="#">Credit Services</a></li>
+                   <li> <a href="#">Track Order</a></li>
+                   <li> <a href="#">Help</a></li>
+               </ul> 
+        </div>
+
+        <!-- navbar  -->
+        <nav class="navbar"></nav>
+
+        <!-- show product details -->
+
+        <div id="internet">
+
+        </div>
+        <div class="productDetails_Container">
+            <div class="leftBox">
+                <div class="headingSection">
+
+                </div>
+                
+               
+                
+            </div>
+            <div id="right_bar">
+        <div id="price">
+            <div id="priceTag">
+                <img src="https://assets.thdstatic.com/images/special-buy--pod.jpg">
+                <h2>$</h2>
+            </div>
+            <div id="paymentTag">
+                <img  src="https://assets.thdstatic.com/images/v1/payment-credit-card-thd.png">
+                <p>$58.00 /mo* suggested payments with 6 months* financing <span>Apply Now</span></p>
+                <div id="itag">
+                   <img src="https://assets.homedepot-static.com/images/v1/info.svg">
+                </div>
+                
+            </div>
+
+        </div>
+        <div id="listDiv">
+            <li>Simple elegant design</li>
+            <li>Spacious seats</li>
+            <li>Features sturdy construction</li>
+           <li><span>View More Details </span></li> 
+        </div>
+        <div id="colorDiv">
+            <p>Color/Finish:<span>Brown</span></p>
+            
+        </div>
+        <div id="shipping">
+            <div id="how">
+                <p id="howfont">How to Get it</p>
+                <p id="firstdeliver">Delivering to: <span id="delivering">96913</span>|<span id="change">Change</span></p>
+            </div>
+
+            <div id="dotedBorder">
+                <div class="box">
+                    <img src="https://assets.thdstatic.com/images/v1/pick-up-tile-dark-gray.svg" alt="">
+                    <h4>Ship to Store</h4>
+                    <p>Not sold </p>
+                </div>
+                <div class="box">
+                    <img src="https://assets.thdstatic.com/images/v1/pick-up-tile-dark-gray.svg" alt="">
+                    <h4>Ship to Home</h4>
+                    <p>Not availab</p>
+
+                    <span id="changeZip">Change Zip</span>
+                </div>
+                <div class="box">
+                    <img src="https://assets.thdstatic.com/images/v1/express-tile-dark-gray.svg" alt="">
+                    <h4>Scheduled Delivery</h4>
+                    <p>Not available for this item</p>
+                </div>
+            </div>
+            
+        </div>
+        <div id="easyReturns">
+            <div id="easy">
+                <img src="https://assets.homedepot-static.com/images/v1/returns.svg">
+            </div>
+            
+              <div id="returns">
+                <h4>Easy Returns In Store and Online</h4>
+                <p>Read our <span>Return Policy</span> </p>
+                </div>
+        </div>
+
+        <div class="buttonSection">
+            <div class="addtoCart">
+               <a href="../main/cart.html"><button id="cartBtn">Add to Cart</button></a>
+                <!-- //../main/cart.html -->
+            </div>
+            <div class="continueBtn">
+               <a href="../main/allProducts.html"><button id="continueShopBtn">Continue Shoppping</button></a> 
+            </div>
+        </div>
+    </div>
+          
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- javaScript link -->
+
+
+<script type="module">
+    import navbar from "../Component/navbar.js";
+    import footer from "../Component/footer.js";
+
+    let flag;
+    console.log(navbar);
+    document.querySelector(".navbar").innerHTML = navbar(flag);
+
+    // footer
+    document.querySelector(".footer").innerHTML = footer();
+</script>
+
+<script src="../Script/currentLocation.js" type="module"></script>
+<script src="../Script/delivery.js" type="module"></script>
+<script src="../Script/profile.js" type="module"></script>
+<script src="../Script/allDepartment.js" type="module"></script>
+<script src="../Script/productDetail.js"></script>
+<script src="../Script/storeIncart.js"></script>
+<script src="./Script/profileUpdate.js"></script>

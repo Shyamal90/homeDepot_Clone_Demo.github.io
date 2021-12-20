@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update page</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="id" placeholder="id">
+        <input type="text" id="name" placeholder="name">
+        <input type="number"  id="price" placeholder="price">
+        <button onclick="updata()">Updata</button>
+    </div>
+</body>
+</html>
+
+<script>
+    let data = JSON.parse(localStorage.getItem("productData"));
+    console.log(data);
+
+    document.querySelector("#id").value = data.id;
+    document.querySelector("#name").value = data.name;
+    document.querySelector("#price").value = data.price;
+
+    let productObj = {
+        id:document.querySelector("#id").value,
+        name:document.querySelector("#name").value,
+        price:document.querySelector("#price").value
+    }
+
+    async function updata(){
+        let url = `http://127.0.0.1:5000/api/products/${data.id}`;
+
+        let response = await fetch(url,{
+            method:"PUT",
+            body:JSON.stringify(productObj),
+            headers:{
+                "Content-Type" :"application/json"
+            }
+        });
+
+        let data = await response.json();
+        console.log(data);
+    }
+
+</script>

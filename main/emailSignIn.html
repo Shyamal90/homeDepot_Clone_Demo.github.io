@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d8096832.js" crossorigin="anonymous"></script>
+    <title>The Home Depot: sign in, create account</title>
+    <link rel = "icon" href ="https://assets.homedepot-static.com/single-signin-ui/0.557.0/build/7b4c51f66559b768081eabf61db98f2d.svg" type = "image/x-icon">
+    <link rel="stylesheet" href="../style/emailSignIn.css">
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="mdiv">
+        <div>
+            <a href="../index.html"><img style="cursor: pointer;" src="https://assets.homedepot-static.com/single-signin-ui/0.557.0/build/7b4c51f66559b768081eabf61db98f2d.svg"/></a>
+            
+            <p style="font-size:23px;line-height:2px;font-weight:bold">Sign In or Create an Account</p>
+        </div>
+        <div id="fdiv">
+            <form>
+                <p id="back" style="color:rgb(118,188,235);cursor: pointer"><i class="fas fa-chevron-left"> </i> Back</p>
+                <p style="font-size:14px;font-weight: 450;">First, enter your email address.</p>
+                <label>Email Address</label>
+                <br>
+                <input type="text" id="email">
+                <p class="info" id="iemail"></p>
+            </form>
+            <button id="button1">Continue</button>
+            <p id="linep">Don't Have an Account?</p>
+            <button id="button2">Create An Account</button>
+        </div>
+        <div id="ldiv">
+            <p>By selecting 'Sign In' you are agreeing to the Pro Xtra Terms and Conditions, Privacy and Security Statement, & My Account Terms and Conditions. For Two-Factor Authentication, message and data rates may apply.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
+<script>
+    document.querySelector("#button1").addEventListener("click", login);
+
+    document.querySelector("#button2").addEventListener("click",register);
+
+    document.querySelector("#back").addEventListener("click",backto);
+
+
+function login(){
+
+    let email=document.querySelector("#email").value;
+    
+
+    let data=JSON.parse(localStorage.getItem("rdata"));  
+
+    console.log(data);
+    console.log(data.email);
+    console.log(email)
+
+    if(data.email==email){
+        console.log(1);
+        window.location.href="passwordSignIn.html"
+    }
+
+
+    // getProfile();
+
+}
+
+function register(){
+
+window.location.href="register.html";
+
+}
+
+function backto(){
+    
+window.location.href="register.html";
+}
+
+
+
+
+</script>

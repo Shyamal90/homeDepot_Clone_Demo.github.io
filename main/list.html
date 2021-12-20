@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homedepot.com</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/productDetails.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/list.css">
+    <link rel="stylesheet" href="../style/listMin.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Heading  -->
+        <div class="heading">
+            <p id="retainerHeading">FREE DELIVERY Over One Million Items Eligible </p>
+        </div>
+
+
+        <!-- Extra Options -->
+        <div class="extraOptions">
+               <ul>
+                   <li> <a href="#">Store Finder</a></li>
+                   <li> <a href="#">Truck & Tool Rental</a></li>
+                   <li> <a href="#">For the Pro</a></li>
+                   <li> <a href="#">Gigt Cards</a></li>
+                   <li> <a href="#">Credit Services</a></li>
+                   <li> <a href="#">Track Order</a></li>
+                   <li> <a href="#">Help</a></li>
+               </ul> 
+        </div>
+
+        <!-- navbar  -->
+        <nav class="navbar"></nav>
+        
+        <!-- show product details -->
+        <div class="productDetails">
+            
+            <div class="createAcc">
+                <h1>Great Projects Start With a List</h1>
+                <p>Sign in to plan a DIY project, dream up a wish list, or create a gift list</p>
+                <a href="../main/register.html"><button>Sign In or Create an Account</button></a>
+            </div>
+
+            <div class="listFunctionity">
+
+                <div class="box">
+                    <img src="https://assets.thdstatic.com/images/v1/heart.svg" alt="">
+                    <h4>Add Items Fast</h4>
+                    <p>Select the heart icon to quickly save items as you shop.</p>
+                </div>
+
+                <div class="box">
+                    <img src="https://assets.thdstatic.com/images/v1/shopping-lists.svg" alt="">
+                    <h4>Save Time</h4>
+                    <p>Remember exactly what you need and make fewer store runs.</p>
+                </div>
+
+                <div class="box">
+                    <img src="https://assets.thdstatic.com/images/v1/money.svg" alt="">
+                    <h4>Save Money</h4>
+                    <p>Get notified when an item goes on sale or its price drops.</p>
+                </div>
+
+                <div class="box">
+                    <img src="https://assets.thdstatic.com/images/v1/projects.svg" alt="">
+                    <h4>Plan Projects</h4>
+                    <p>Keep track of supplies and stay organized while you work.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- javaScript link -->
+
+<script type="module">
+    import navbar from "../Component/navbar.js";
+    import footer from "../Component/footer.js";
+
+    let flag;
+    console.log(navbar);
+    document.querySelector(".navbar").innerHTML = navbar(flag);
+
+    // footer
+    document.querySelector(".footer").innerHTML = footer();
+</script>
+
+<script src="../Script/currentLocation.js" type="module"></script>
+<script src="../Script/delivery.js" type="module"></script>
+<script src="../Script/profile.js" type="module"></script>
+<script src="../Script/allDepartment.js" type="module"></script>
+<script src="./Script/profileUpdate.js"></script>

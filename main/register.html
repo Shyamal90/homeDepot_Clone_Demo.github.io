@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d8096832.js" crossorigin="anonymous"></script>
+    <title>The Home Depot: sign in, create account</title>
+    <link rel = "icon" href ="https://assets.homedepot-static.com/single-signin-ui/0.557.0/build/7b4c51f66559b768081eabf61db98f2d.svg" type = "image/x-icon">
+    <link rel="stylesheet" href="../style/register.css">
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="mdiv">
+        <div>
+            <img style="cursor: pointer;" src="https://assets.homedepot-static.com/single-signin-ui/0.557.0/build/7b4c51f66559b768081eabf61db98f2d.svg"/>
+            <p style="font-size:23px;line-height:2px;font-weight:bold">Create an Account</p>
+        </div>
+        <div id="fdiv">
+            <form>
+                <p style="color:rgb(118,188,235);cursor: pointer"><i class="fas fa-chevron-left"> </i> Back</p>
+                <label>Email Address</label>
+                <br>
+                <input type="text" id="email">
+                <p class="info" id="iemail"></p>
+                <label>Password</label>
+                <br>
+                <input type="password" id="password">
+                <p class="info" id="ipass"></p>
+                <div id="phelp"></div>
+                <label>Zip Code</label>
+                <br>
+                <input type="number" id="zip">
+                <p class="info" id="izip"></p>
+                <label>Phone</label>
+                <br>
+                <input type="number" id="mobile">
+                <p id="imob" class="info"></p>
+            </form>
+            <div style="cursor: pointer">
+                <input type="checkbox" id="cbx1" name="cbx1" style="cursor: pointer">
+                <label for="cbx1" style="cursor: pointer">Keep me Signed in</label>
+                
+            </div>
+            <div style="cursor: pointer">
+                
+                <input type="checkbox" id="cbx2" name="cbx2" style="cursor: pointer" >
+                <label for="cbx2" style="cursor: pointer">Verify my mobile number via text message or phone call</label><br>
+                
+            </div>
+            <button>Create an Account</button>
+        </div>
+        <div id="ldiv">
+            <p>Already Have an Account? <a href="emailSignin.html"> Sign In</a></p>
+            <p>By selecting 'Create an Account' you are agreeing to the Pro Xtra Terms and Conditions, Privacy and Security Statement, & My Account Terms and Conditions.</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    document.querySelector("button").addEventListener("click", register);
+
+
+    function register(){
+        let nt=true;
+        let pt=true;
+        let ut=true;
+        let mt=true;
+        let a;
+
+        let zip=document.querySelector("#zip").value;
+        let password=document.querySelector("#password").value;
+        let email=document.querySelector("#email").value;
+        let mobile=document.querySelector("#mobile").value;
+
+        if(zip.length<5){
+            document.querySelector("#izip").textContent="Please enter a valid 5-digit ZIP Code.";
+            nt=false;
+        }
+        if(password.length<9){
+            document.querySelector("#ipass").textContent="Please add a password.";
+            pt=false;
+        }
+        if(mobile.length<10){
+            document.querySelector("#imob").textContent="Phone numbers must be 10 digits.";
+            mt=false;
+        }
+        if(email.length<1){
+            document.querySelector("#iemail").textContent="Please provide your email address.";
+            ut=false;
+        }else{
+            a=(emailCheck(email,ut));
+        }
+
+        function emailCheck(line,ut) {
+            var name = "";
+            var std = "abcdefghijklmnopqrstuvwxyz1234567890_-.";
+            var std1 = "abcdefghijklmnopqrstuvwxyz@";
+            var domain = "";
+            var tld = "";
+            var ind = 0;
+            var ind1 = 0;
+            var ind2 = 0;
+            var check1 = true;
+            var check2 = true;
+            var check3 = false;
+
+            for (var i = 0; i < line.length; i++) {
+                if (line[i] == "@") {
+                    break;
+                } else {
+                    name = name + line[i];
+                    ind++;
+                }
+            }
+
+            var nm1 = "";
+            if (name != "") {
+                for (var a = 0; a < name.length; a++) {
+                    for (var b = 0; b < std.length; b++) {
+                        if (name[a] == std[b]) {
+                            nm1 = nm1 + name[a];
+                        }
+                    }
+                }
+            }
+
+            if (nm1 != name) {
+                check1 = false;
+            }
+
+
+
+            for (var j = ind; j < line.length; j++) {
+                if (line[j] == ".") {
+                    break;
+                } else {
+                    domain = domain + line[j];
+                    ind1++;
+                }
+            }
+
+            var dm1 = "";
+            if (domain != "") {
+                for (var a = 0; a < domain.length; a++) {
+                    for (var b = 0; b < std1.length; b++) {
+                        if (domain[a] == std1[b]) {
+                            dm1 = dm1 + domain[a];
+                        }
+                    }
+                }
+            }
+            if ((dm1 == "@") || (dm1 != domain)) {
+                check2 = false;
+            }
+
+
+            for (var k = ind1 + ind; k < line.length; k++) {
+                tld = tld + line[k];
+            }
+
+            if ((tld == ".com") || (tld == ".net") || (tld == ".org")) {
+                check3 = true;
+            }
+            var checker = "";
+            if ((check1 == true) && (check2 == true) && (check3 == true)) {
+            } else {
+                checker = "Please provide your email address, formatted as you@domain.com.";
+                ut=false;
+            }
+            document.querySelector("#iemail").textContent="";
+            document.querySelector("#iemail").textContent=checker;
+            return ut;
+        }
+
+        let rdata={
+            email:email,
+            password:password,
+            mobile:mobile,
+            zip:zip
+        };
+        if(a==true && pt==true &&  nt==true && mt==true){
+            fefun(rdata)
+        }
+        
+    }
+
+    function fefun(rdata){
+
+        console.log(rdata);
+
+        localStorage.setItem("rdata", JSON.stringify(rdata));
+
+        alert("Registration Successful");
+        window.location.href="emailSignin.html";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

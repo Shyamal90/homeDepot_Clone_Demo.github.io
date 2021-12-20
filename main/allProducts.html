@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Home Depot</title>
+    <link rel = "icon" href ="https://assets.homedepot-static.com/single-signin-ui/0.557.0/build/7b4c51f66559b768081eabf61db98f2d.svg" type = "image/x-icon">
+     <!----------font awesome cdn ------------->
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+   <!-- bootstrap icons cdn -->
+   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/product.css">
+    <link rel="stylesheet" href="../style/productDetails.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/list.css">
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/listMin.css">
+    <link rel="stylesheet" href="../style/sidebar.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <!-- Heading  -->
+        <div class="heading">
+          <p id="retainerHeading">#1 Home Improvement Retailer</p>
+        </div>
+
+
+      <!-- Extra Options -->
+      <div class="extraOptions">
+             <ul>
+                 <li> <a href="#">Store Finder</a></li>
+                 <li> <a href="#">Truck & Tool Rental</a></li>
+                 <li> <a href="#">For the Pro</a></li>
+                 <li> <a href="#">Gigt Cards</a></li>
+                 <li> <a href="#">Credit Services</a></li>
+                 <li> <a href="#">Track Order</a></li>
+                 <li> <a href="#">Help</a></li>
+             </ul> 
+      </div>
+
+      <!-- navbar  -->
+      <nav class="navbar"></nav>
+
+      <!-- Product Banner -->
+      <div class="productBanner">
+        <img src="https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/bopis-desktop.jpg" alt="">
+      </div>
+
+      <!-- Result and sorting heading -->
+      <div class="resultDiv">
+
+        <div class="box1">
+          <h4>Results</h4>
+        </div>
+
+        <div class="box2">
+          <p>Sort by: </p>
+
+          <select id="sortEl">
+            <option value="bestMatch">Best Match</option>
+            <option value="topSeller">Top Sellers</option>
+            <option value="low">Price Low to High</option>
+            <option value="high">Price High to Low</option>
+            <option value="topRate">Top Rated Products</option>
+          </select>
+        </div>
+      </div>
+      
+
+      <div class="product_wrapper">
+        <div class="filterOptions">
+          <div class="get_fast" style="margin-top:0px;">
+            <div class="content" >
+              <h4>Get It Fast </h4>
+              <div id="gif"></div>
+            </div>
+            <h4 onclick="showGif()"><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+            
+           </div>
+           <div class="get_fast">
+               <div class="content" >
+                <h4>Availability</h4>
+                <div id="avail"></div>
+               </div>
+            
+               <h4 onclick="showAvail()"><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+            
+           </div>
+           <div class="get_fast">
+                <div class="content">
+                  <h4>Department</h4>
+                  <div id="department"></div>
+                </div>
+            
+                <h4 onclick="showDep()"><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+          </div>
+            <div class="get_fast">
+                <div class="content">
+                   <h4>Brand</h4>
+                   <div id="brand"></div>
+                </div>
+            
+                <h4 onclick="showBran()"><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+           <div class="get_fast">
+              <div class="content">
+                <h4>Price</h4>
+                <div id="prc"></div>
+              </div>
+          
+              <h4 onclick="showPrc()"><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+        </div>
+            <div class="get_fast">
+                <div class="content">
+                  <h4>Style</h4>
+                  <div id="style"></div>
+                </div>
+            
+                <h4 onclick="showstyle()"><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+               <h4>Review Rating</h4>
+                </div>
+            
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                     <h4>Product Width (in.)</h4>
+                </div>
+          
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                 <h4>Savings Center</h4>
+                </div>
+            
+                <h3><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h3>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                 <h4>Product Depth (in.)</h4>
+                </div>
+            
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                   <h4>New Arrival</h4>
+                </div>
+           
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                  <h4>Saving by Percentage Off</h4>
+                </div>
+            
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                  <h4>Frame Material</h4>
+                </div>
+            
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                  <h4>Product Height (in.) </h4>
+                </div>
+            
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                 <h4>Color Family </h4>
+                </div>
+            
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                     <h4>The Home Depot Events </h4>
+                </div>
+          
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+            <div class="get_fast">
+                <div class="content">
+                  <h4>Upholstery Material </h4>
+                </div>
+           
+                <h4><i style="margin-top:50%;"class="fas fa-chevron-down"></i></h4>
+           </div>
+        </div>
+        <div class="product-container">
+        </div>
+      </div>
+
+
+      <!-- footer section -->
+      <footer class="footer">
+
+      </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- javaScript link -->
+
+<script type="module">
+  import navbar from "../Component/navbar.js";
+  import footer from "../Component/footer.js";
+
+  let flag;
+  console.log(navbar);
+  document.querySelector(".navbar").innerHTML = navbar(flag);
+
+  // footer
+  document.querySelector(".footer").innerHTML = footer();
+</script>
+
+
+<script src="../Script/allProduct.js" type="module"></script>
+
+<script src="../Script/currentLocation.js" type="module"></script>
+<script src="../Script/delivery.js" type="module"></script>
+<script src="../Script/profile.js" type="module"></script>
+<script src="../Script/allDepartment.js" type="module"></script>
+<script src="../Script/db.js"></script>
+<script src="../Script/profileUpdate.js"></script>
+<script src="../script/sidebar.js"></script>
